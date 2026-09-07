@@ -2,7 +2,7 @@
 titel: status.md — Projekt Kiefer-Webseite
 kategorie: Steuerung
 kurzbeschreibung: Stand je Stufe, letzte Session, nächster Schritt. Am Ende jeder Session aktualisieren.
-stand: 2026-09-03
+stand: 2026-09-07
 ---
 
 # Status
@@ -31,6 +31,8 @@ stand: 2026-09-03
 **Feedback-Runde 3 (24.08.2026):** Alle 12 Punkte von Admir umgesetzt. Die Wunschbilder lagen als nummerierte Originaldateien (1.jpeg bis 12.jpg) im Ordner „Silvan Kiefer" und wurden 1:1 übernommen. Dazu: Kontakt-Sektion als kompakte Ansprechpartner-Karte (Bild im Originalformat, nichts abgeschnitten), Galerie auf Über uns mit dem Luftbild als Leitbild, Smart-Bild entfernt. Details in `06_.../output/feedback-runde-2-kunde.md`.
 
 **Feedback-Runde 4 (Sprachnachricht Sandra Kiefer 02.09.2026, umgesetzt 03.09.2026):** Hero radikal reduziert auf ihren Wunsch: schwarzer Grund, weißes Logo, „DENTAL-LABOR", Claim „Zähne mit Biss und Haltbarkeit" mit kleinem „barkeit" (wie auf dem Fahrzeug), kein Foto. Darunter neue Einstiegs-Sektion mit Luftbild und Text, dann Kennzahlen und Leistungen. Textfehler „seit fast fünf Jahrzehnten" an 3 Stellen korrigiert. Abgabepaket `~/Desktop/Silvan Kiefer/Kiefer-Webseite_Stand_2026-09-03(.zip)`. Details in `06_.../output/feedback-runde-2-kunde.md`, Runde 4.
+
+**Änderung 5 (Kunde, 07.09.2026): Ansprechpartner-Seite.** Das Labor wünscht wie auf der alten Homepage (`ansprechpartner_team.php`) eine eigene Seite mit den Ansprechpartnern. Umgesetzt als `website/ansprechpartner.html`: Hero mit Zentrale-Karte (Telefon, WhatsApp, E-Mail, Öffnungszeiten, Adresse), Geschäftsführung mit Foto (Sandra Kiefer, Armin Lötterle), Zahntechnik und Verwaltung (Markus Nass ZTM; Karin Ohngemach und Dominique Loriaux: Abrechnung, Terminplanung, Logistik), Fahrdienst-Block, Schluss. Menüpunkt „Ansprechpartner" und Footer-Link auf allen Seiten, Sitemap ergänzt. **Quellenlage:** Die alte Seite war aus der Entwicklungsumgebung nicht abrufbar (Netzsperre), die Personen und Rollen stammen aus dem Suchmaschinen-Auszug der alten Seite; Sandras Adresse `sandra.kiefer@dental-kiefer.de` aus ihrer E-Mail-Signatur, Armins `a.loetterle@dental-kiefer.de` von der Karriereseite, die drei anderen über `info@dental-kiefer.de`. **Offen:** Freigabe der Namen/Rollen/Adressen durch Sandra, Porträtfotos der drei Kolleg:innen (bisher Initialen), Rollentexte der drei Kolleg:innen sind Vorschläge.
 
 **Nächster Schritt:** Paket Stand 03.09.2026 an Sandra Kiefer schicken. Von ihr bestätigen lassen: „Biss" blau oder weiß, Bild 4 (Fräse) wirklich in „Reparaturen & Service"? **Vektorlogo (SVG/AI/EPS) anfordern**, es existiert nur eine 287-px-PNG. Danach Livegang-Vorbereitung (Domain über Stefan Bräutigam, Formular-Zieladresse, Google-Profil verlinken, Freigabe Texte/Impressum/Datenschutz).
 

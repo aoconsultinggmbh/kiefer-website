@@ -2176,3 +2176,117 @@ img.bild--kopf { object-position: 50% 18%; }
 @media (prefers-reduced-motion: reduce) {
   .marke-gross__schwung, .marke-gross__wort, .marke-gross__sub, .hero__scroll { animation: none; }
 }
+
+/* =========================================================================
+   Ansprechpartner-Seite (Kundenwunsch 07.09.2026): Die alte Homepage hatte
+   eine eigene Seite mit allen Ansprechpartnern. Karten mit Foto oder
+   Initialen, Rolle, Telefon und E-Mail. Dazu die Zentrale-Karte im Hero.
+   ========================================================================= */
+.ap-zentrale {
+  background: var(--weiss);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius-gross);
+  padding: 1.6rem 1.7rem;
+  box-shadow: 0 30px 60px -36px rgba(7, 26, 43, .35);
+}
+.ap-zentrale__titel {
+  display: block;
+  font-size: .715rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--grau);
+  margin-bottom: 1rem;
+}
+.ap-zentrale ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .95rem; }
+.ap-zentrale li { display: flex; align-items: flex-start; gap: .85rem; font-size: .95rem; line-height: 1.45; }
+.ap-zentrale li > svg { flex: none; color: var(--blau); margin-top: .15rem; }
+.ap-zentrale li b { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--grau); margin-bottom: .1rem; }
+.ap-zentrale li a { color: var(--ink); font-weight: 600; text-decoration: none; transition: color var(--schnell); }
+.ap-zentrale li a:hover { color: var(--blau); }
+
+.ap-raster { display: grid; gap: 1.25rem; }
+.ap-raster--zwei { grid-template-columns: repeat(2, 1fr); }
+.ap-raster--drei { grid-template-columns: repeat(3, 1fr); }
+
+.ap-karte {
+  background: var(--weiss);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius-gross);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: transform var(--mittel), box-shadow var(--mittel), border-color var(--schnell);
+}
+.ap-karte:hover {
+  transform: translateY(-4px);
+  border-color: rgba(1, 93, 172, .35);
+  box-shadow: 0 30px 50px -30px rgba(7, 26, 43, .35);
+}
+.ap-karte--gross { flex-direction: row; align-items: stretch; padding: 1.35rem; gap: 1.6rem; }
+.ap-karte__bild {
+  flex: none;
+  width: 200px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--papier);
+}
+.ap-karte__bild img { width: 100%; height: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+.ap-karte__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: .04em;
+  color: var(--weiss);
+  background: linear-gradient(135deg, var(--blau), var(--blau-hell));
+  box-shadow: 0 10px 22px -12px rgba(1, 93, 172, .7);
+}
+.ap-karte__text { display: flex; flex-direction: column; min-width: 0; }
+.ap-karte__name { font-size: 1.45rem; margin-bottom: .2rem; }
+.ap-karte__rolle { font-size: .84rem; font-weight: 600; color: var(--blau); margin-bottom: .8rem; }
+.ap-karte__info { font-size: .93rem; color: var(--grau); line-height: 1.6; }
+.ap-karte__kontakt { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: auto; padding-top: 1.1rem; }
+.ap-karte__kontakt .kontaktzeile { padding: .7rem .95rem; font-size: .88rem; word-break: break-all; }
+
+.hinweiskasten a { color: var(--blau); font-weight: 600; text-decoration: none; }
+.hinweiskasten a:hover { text-decoration: underline; }
+
+@media (max-width: 1080px) {
+  .ap-raster--drei { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .ap-raster--zwei { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .ap-raster--drei { grid-template-columns: 1fr; }
+  .ap-karte--gross { flex-direction: column; }
+  .ap-karte__bild { width: 100%; }
+  .ap-karte__bild img { aspect-ratio: 4 / 3; }
+}
+
+/* Sieben Menuepunkte (neu: Ansprechpartner): Header etwas dichter, damit
+   der Kontakt-Button bis 900 px Breite vollstaendig sichtbar bleibt. */
+.nav { gap: 1.35rem; }
+.nav a { font-size: .925rem; }
+.kopf .btn--cta, .btn-wa { flex: none; }
+/* Der Claim neben dem Logo passt mit sieben Menuepunkten nicht mehr in die
+   1240-px-Bahn; er steht im Hero der Startseite und im Footer. */
+.marke__sub { display: none; }
+@media (max-width: 1200px) {
+  .nav { gap: 1rem; }
+  .nav a { font-size: .9rem; }
+  .kopf__innen { gap: 1.1rem; }
+}
+/* Zwischen 900 und 1130 px: Kontakt-Button aus dem Header, dafuer die
+   Sticky-Leiste (Kontakt + Anruf) wie am Handy. */
+@media (max-width: 1130px) {
+  .kopf .btn--cta { display: none; }
+  .sticky-bar { display: flex; }
+  body { padding-bottom: 74px; }
+}

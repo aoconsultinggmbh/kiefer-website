@@ -14,6 +14,7 @@ es geht keine Anfrage an Google oder andere Dritte.
 | `website/` | **Die eigentliche Webseite.** Alles hier wird veröffentlicht. |
 | `website/index.html` | Startseite |
 | `website/ueber-uns.html` | Über uns |
+| `website/ansprechpartner.html` | Ansprechpartner (Geschäftsführung, Zahntechnik, Verwaltung, Fahrdienst) |
 | `website/leistungen/` | Sechs Leistungsseiten |
 | `website/impressum.html`, `website/datenschutz.html` | Rechtsseiten (**Entwürfe**, vor Livegang prüfen) |
 | `website/assets/` | Design (`css/style.css`), Schriften (`fonts/fonts.css`), Bilder (`img/`), Skript (`js/app.js`) |
@@ -47,6 +48,10 @@ Jede Änderung steht unter **„Commits"** und kann rückgängig gemacht werden.
   Formular-Abschnitt ergänzen, anwaltlich prüfen lassen.
 - **Domain `dental-kiefer.de`**: Wo liegt sie, wer hostet die alte Seite? Vor der Umstellung klären.
 - **Freigabe der Texte** durch Sandra Kiefer (Leistungsspektrum ist bereits eingearbeitet).
+- **Ansprechpartner-Seite** (07.09.2026): Namen, Rollen und E-Mail-Adressen stammen von der alten Seite
+  `ansprechpartner_team.php` (Suchmaschinen-Auszug, die alte Seite selbst war aus der Entwicklungsumgebung nicht
+  erreichbar). Vom Kunden bestätigen lassen; Porträtfotos für Markus Nass, Karin Ohngemach und Dominique Loriaux
+  anfordern (aktuell Initialen-Platzhalter).
 - Sprachnachricht von Sandra Kiefer vom 02.09.2026 (Transkript in `doku/projekt/05_uebergabe/`):
   prüfen, ob alle Punkte umgesetzt sind.
 
