@@ -1,0 +1,41 @@
+VORSCHAU: NEUE WEBSEITE S. KIEFER GMBH DENTALLABOR
+Stand: 03.09.2026
+Erstellt von: AO Consulting
+
+===================================================
+
+SO OEFFNEN SIE DIE SEITE (Windows):
+
+1. Rechtsklick auf die ZIP-Datei, dann "Alle extrahieren..." waehlen.
+   Wichtig: Nicht die Dateien direkt in der ZIP-Vorschau anklicken,
+   sonst fehlen Bilder und Design.
+
+2. Im entpackten Ordner die Datei START-HIER.html oeffnen.
+   Sie fuehrt Sie mit einem Klick zur Webseite.
+
+   Alternativ: Ordner "website" oeffnen und index.html doppelklicken.
+
+3. Die Seite laeuft komplett offline, kein Internet notwendig.
+
+===================================================
+
+ENTHALTENE SEITEN:
+
+- index.html ................. Startseite
+- ueber-uns.html ............. Ueber uns
+- leistungen/ ................ sechs Leistungsseiten
+- impressum.html ............. Impressum (Entwurf)
+- datenschutz.html ........... Datenschutz (Entwurf)
+
+===================================================
+
+HINWEISE:
+
+- Das Kontaktformular ist im Vorschau-Modus: Beim Absenden oeffnet sich
+  Ihr E-Mail-Programm mit der fertigen Anfrage. Sobald die Seite online
+  steht, geht die Anfrage direkt ins Postfach des Labors.
+
+- Impressum und Datenschutz sind Entwuerfe und muessen vor dem Livegang
+  geprueft und ergaenzt werden.
+
+Fragen und Aenderungswuensche: AO Consulting, bahovic@ao-consult.de
