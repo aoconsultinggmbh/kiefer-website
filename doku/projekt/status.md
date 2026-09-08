@@ -45,7 +45,7 @@ stand: 2026-09-07
 **Änderung 7 (Admir, 08.09.2026): Kopfmenü entlastet.** Menüpunkt „FAQ" auf allen 11 Seiten entfernt (sechs Punkte statt sieben). Der FAQ-Abschnitt bleibt auf der Startseite (`#faq`) und am Ende jeder Leistungsseite; der Link „Häufige Fragen" steht weiter in der Fußzeile. Keine Adresse fällt weg, kein SEO-Verlust. Nächster Kandidat, falls noch ruhiger gewünscht: „Warum KIEFER" (ebenfalls nur ein Startseiten-Abschnitt).
 
 **Beim Kunden zu klären (Stand 08.09.2026):**
-- Heißt der Ansprechpartner **Armin** oder **Mike** Lötterle? Die Seite sagt Armin (nach alter Homepage), der WhatsApp-Kontakt heißt Mike.
+- ~~Armin oder Mike Lötterle?~~ **Geklärt (Admir, 08.09.2026): Der Geschäftsführer ist Armin Lötterle; Mike Lötterle ist sein Sohn und schickt das Feedback per WhatsApp.** Die Seite bleibt wie sie ist.
 - Zuordnung der zwei Administrations-Porträts bestätigen: Blazer = Karin Ohngemach, Tattoos = Dominique Loriaux (Admirs Zuordnung, noch nicht vom Labor bestätigt).
 - Freigabe Namen, Rollen und E-Mail-Adressen auf der Ansprechpartner-Seite.
 - Offen aus Runde 4: „Biss" blau oder weiß? Bild 4 (Fräse) wirklich in „Reparaturen & Service"?
