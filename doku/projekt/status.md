@@ -34,6 +34,22 @@ stand: 2026-09-07
 
 **Änderung 5 (Kunde, 07.09.2026): Ansprechpartner-Seite.** Das Labor wünscht wie auf der alten Homepage (`ansprechpartner_team.php`) eine eigene Seite mit den Ansprechpartnern. Umgesetzt als `website/ansprechpartner.html`: Hero mit Zentrale-Karte (Telefon, WhatsApp, E-Mail, Öffnungszeiten, Adresse), Geschäftsführung mit Foto (Sandra Kiefer, Armin Lötterle), Zahntechnik und Verwaltung (Markus Nass ZTM; Karin Ohngemach und Dominique Loriaux: Abrechnung, Terminplanung, Logistik), Fahrdienst-Block, Schluss. Menüpunkt „Ansprechpartner" und Footer-Link auf allen Seiten, Sitemap ergänzt. **Quellenlage:** Die alte Seite war aus der Entwicklungsumgebung nicht abrufbar (Netzsperre), die Personen und Rollen stammen aus dem Suchmaschinen-Auszug der alten Seite; Sandras Adresse `sandra.kiefer@dental-kiefer.de` aus ihrer E-Mail-Signatur, Armins `a.loetterle@dental-kiefer.de` von der Karriereseite, die drei anderen über `info@dental-kiefer.de`. **Offen:** Freigabe der Namen/Rollen/Adressen durch Sandra, Porträtfotos der drei Kolleg:innen (bisher Initialen), Rollentexte der drei Kolleg:innen sind Vorschläge.
 
+**Änderung 6 (Kunde per WhatsApp an Admir, 07.09.2026 20:40, Absender „Mike Lötterle"): ehemaliger Laborleiter von der Seite nehmen.** Drei rot markierte Screenshots. Umgesetzt am 08.09.2026:
+- Porträt „Sandra Kiefer im lila Kleid" auf Über uns (`portrait-1.jpg`) ersetzt durch das vom Kunden mitgeschickte Foto im Rock (`sandra-kiefer-labor.jpg`, 800x533 aus dem Original 1920x1280). Originale liegen in `~/Desktop/Silvan Kiefer/Bilder/2026-09 Sandra Kiefer Rock quer|hoch.jpg`.
+- Zwei Fotoband-Bilder mit dem ehemaligen Laborleiter (`band-3.jpg` Gruppe am Stuhl, `band-9.jpg` Gruppe mit erhobenen Armen) ersetzt durch `band-13.jpg` (Kolleginnen auf der Bank, `300 - Kiefer_302.jpg`) und `band-14.jpg` (Gruppe im Garten, `302 - Kiefer_304.jpg`) — beide aus dem Kunden-Fotoshooting, ohne ihn. Betrifft Laufband auf index.html und ueber-uns.html.
+- Alle übrigen Bilder der Seite geprüft: er ist sonst nirgends erkennbar. Ausnahme: das Ganzteam-Foto vor der roten Garage (`band-10.jpg` / `team-alle.jpg`), dort ist er allenfalls winzig; vom Kunden nicht bemängelt, bleibt.
+- **Nicht verwenden:** `46 - Kiefer_47.jpg` und `mn.jpg` im Kundenordner zeigen den ehemaligen Laborleiter.
+
+**Wichtige Korrektur zur Ansprechpartner-Seite:** Der auf der alten Homepage genannte **Markus Nass (ZTM) ist der ehemalige Laborleiter** — das Polo-Shirt auf seinem Foto trägt „M. Na…". Er wurde am 07.09.2026 aus `ansprechpartner.html` (Karten und JSON-LD) entfernt; das war richtig, nicht nur eine Quellenfrage. Die Seite zeigt jetzt Sandra Kiefer und Armin Lötterle (Geschäftsführung) sowie Karin Ohngemach und Dominique Loriaux (Administration) mit Porträtfotos.
+
+**Änderung 7 (Admir, 08.09.2026): Kopfmenü entlastet.** Menüpunkt „FAQ" auf allen 11 Seiten entfernt (sechs Punkte statt sieben). Der FAQ-Abschnitt bleibt auf der Startseite (`#faq`) und am Ende jeder Leistungsseite; der Link „Häufige Fragen" steht weiter in der Fußzeile. Keine Adresse fällt weg, kein SEO-Verlust. Nächster Kandidat, falls noch ruhiger gewünscht: „Warum KIEFER" (ebenfalls nur ein Startseiten-Abschnitt).
+
+**Beim Kunden zu klären (Stand 08.09.2026):**
+- Heißt der Ansprechpartner **Armin** oder **Mike** Lötterle? Die Seite sagt Armin (nach alter Homepage), der WhatsApp-Kontakt heißt Mike.
+- Zuordnung der zwei Administrations-Porträts bestätigen: Blazer = Karin Ohngemach, Tattoos = Dominique Loriaux (Admirs Zuordnung, noch nicht vom Labor bestätigt).
+- Freigabe Namen, Rollen und E-Mail-Adressen auf der Ansprechpartner-Seite.
+- Offen aus Runde 4: „Biss" blau oder weiß? Bild 4 (Fräse) wirklich in „Reparaturen & Service"?
+
 **Nächster Schritt:** Paket Stand 03.09.2026 an Sandra Kiefer schicken. Von ihr bestätigen lassen: „Biss" blau oder weiß, Bild 4 (Fräse) wirklich in „Reparaturen & Service"? **Vektorlogo (SVG/AI/EPS) anfordern**, es existiert nur eine 287-px-PNG. Danach Livegang-Vorbereitung (Domain über Stefan Bräutigam, Formular-Zieladresse, Google-Profil verlinken, Freigabe Texte/Impressum/Datenschutz).
 
 **Offene Entscheidungen (für Admir/Kunde):**
