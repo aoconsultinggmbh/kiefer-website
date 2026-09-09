@@ -2267,7 +2267,9 @@ img.bild--kopf { object-position: 50% 18%; }
   .ap-raster--drei { grid-template-columns: 1fr; }
   .ap-karte--gross { flex-direction: column; }
   .ap-karte__bild { width: 100%; }
-  .ap-karte__bild img { aspect-ratio: 4 / 3; }
+  /* Hochformat beibehalten: die Portraits sind 4:5. Ein 4:3-Kasten
+     schnitt auf dem Handy 40 Prozent oben und unten weg, also die Koepfe. */
+  .ap-karte__bild img { aspect-ratio: 4 / 5; object-position: 50% 25%; }
 }
 
 /* Sieben Menuepunkte (neu: Ansprechpartner): Header etwas dichter, damit
