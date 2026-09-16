@@ -54,6 +54,13 @@ stand: 2026-09-07
 - **Wer ist der dritte Zahntechnikermeister?** Die Ansprechpartner-Seite zeigt unter „Zwei Meister. Ein Versprechen." nur Sandra Kiefer und Armin Lötterle. Soll der dritte Meister dort mit Foto und Rolle dazu (dann Überschrift „Drei Meister")? Name und Foto fehlen uns.
 - **Freigabe der beiden Textstellen**, falls eine der Varianten gewählt wird.
 
+**Änderung 9 (Sandra Kiefer über Admir, 16.09.2026):** Umgesetzt am 16.09.2026:
+- Startseite, Abschnitt „Das Team": Satz jetzt „Diese Erfahrung steckt in jeder Krone, jedem Teleskop, jeder Prothese." (vorher „Diese Erfahrung schmeckt man nicht, aber man sieht sie: …").
+- Ansprechpartner, Einleitung: „Hier sehen Sie, wer bei uns wofür zuständig ist." (vorher „Hier finden Sie, wer wofür da ist.").
+- Ansprechpartner, Geschäftsführung: Überschrift „Zwei Meister." → **„Drei Meister."**, Einleitungssatz entsprechend angepasst („… Zusammen mit einem dritten Meister im Haus …"). **Der dritte Meister wird auf Wunsch des Labors weder namentlich genannt noch mit Foto gezeigt.** Die Karten bleiben bei Sandra Kiefer und Armin Lötterle.
+- Über uns, Porträtreihe (vier Bilder): Sandras Foto im Polo/Rock (`sandra-kiefer-labor.jpg`) ersetzt durch das neue Porträt im schwarzen Kleid, Datei `sandra-kiefer-schwarz.jpg` (800x533 aus dem Original `iwanartemjew_AO_Consulting_-_Dentallabor_Kiefer/DentallaborKIEFER_126.jpg`, 7008x4672). Das alte Bild wurde aus dem Projekt entfernt.
+- **Nicht geändert:** Sandras Hochformat-Porträt auf der Ansprechpartner-Seite (`sandra-kiefer.jpg`) — falls dort auch das neue Bild gewünscht ist, bitte melden.
+
 **Beim Kunden zu klären (Stand 08.09.2026):**
 - ~~Armin oder Mike Lötterle?~~ **Geklärt (Admir, 08.09.2026): Der Geschäftsführer ist Armin Lötterle; Mike Lötterle ist sein Sohn und schickt das Feedback per WhatsApp.** Die Seite bleibt wie sie ist.
 - Zuordnung der zwei Administrations-Porträts bestätigen: Blazer = Karin Ohngemach, Tattoos = Dominique Loriaux (Admirs Zuordnung, noch nicht vom Labor bestätigt).
