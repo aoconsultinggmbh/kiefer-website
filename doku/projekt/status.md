@@ -44,6 +44,16 @@ stand: 2026-09-07
 
 **Änderung 7 (Admir, 08.09.2026): Kopfmenü entlastet.** Menüpunkt „FAQ" auf allen 11 Seiten entfernt (sechs Punkte statt sieben). Der FAQ-Abschnitt bleibt auf der Startseite (`#faq`) und am Ende jeder Leistungsseite; der Link „Häufige Fragen" steht weiter in der Fußzeile. Keine Adresse fällt weg, kein SEO-Verlust. Nächster Kandidat, falls noch ruhiger gewünscht: „Warum KIEFER" (ebenfalls nur ein Startseiten-Abschnitt).
 
+**Änderung 8 (Sandra Kiefer per WhatsApp an Admir, 16.09.2026): fünf Punkte.** Umgesetzt am 16.09.2026:
+- **Calw im Einzugsgebiet ergänzt.** Calw stand bereits in den strukturierten Daten (`areaServed`), fehlte aber im sichtbaren Text. Jetzt an 13 Stellen ergänzt: Startseite (Fahrdienst-Absatz, FAQ, FAQ-JSON-LD), Ansprechpartner (Fahrdienst-Liste), alle sechs Leistungsseiten (Zeile „Einzugsgebiet") sowie Reparaturen & Service (Fließtext, FAQ, FAQ-JSON-LD).
+- **Drei Zahntechnikermeister.** Die Angabe stand nirgends. Ergänzt an drei Stellen: Kennzahl „30 Kolleginnen und Kollegen" auf der Startseite, Eckdaten „Team" auf Über uns, Team-Absatz auf Über uns. Formulierung jeweils „darunter drei Zahntechnikermeister".
+- **TAP-Schiene / Protrusionsschiene und Münchner Schiene.** Beide waren bereits auf `leistungen/schienen-kfo.html` vorhanden, aber in der Schreibweise des Labors schwer zu finden: „Schnarcher- und Protrusionsschienen (TAP)" und „Münchnerschienen". Jetzt so geschrieben, wie Sandra Kiefer und die Praxen danach suchen: **„TAP-Schiene / Protrusionsschiene (Schnarcherschiene)"** und **„Münchner Schiene"**. Beide stehen zusätzlich in Titel, Beschreibung, Eckdaten, FAQ und JSON-LD derselben Seite sowie in der Leistungskachel auf der Startseite.
+- **Zwei Textstellen (untere Folie „…wer wofür da ist.", obere Folie „Diese Erfahrung schmeckt man nicht…")** — bewusst **nicht** eigenmächtig geändert. Es sind Geschmacksfragen, nicht Fehler. Formulierungsvorschläge liegen bei Admir zur Auswahl.
+
+**Neu beim Kunden zu klären (16.09.2026):**
+- **Wer ist der dritte Zahntechnikermeister?** Die Ansprechpartner-Seite zeigt unter „Zwei Meister. Ein Versprechen." nur Sandra Kiefer und Armin Lötterle. Soll der dritte Meister dort mit Foto und Rolle dazu (dann Überschrift „Drei Meister")? Name und Foto fehlen uns.
+- **Freigabe der beiden Textstellen**, falls eine der Varianten gewählt wird.
+
 **Beim Kunden zu klären (Stand 08.09.2026):**
 - ~~Armin oder Mike Lötterle?~~ **Geklärt (Admir, 08.09.2026): Der Geschäftsführer ist Armin Lötterle; Mike Lötterle ist sein Sohn und schickt das Feedback per WhatsApp.** Die Seite bleibt wie sie ist.
 - Zuordnung der zwei Administrations-Porträts bestätigen: Blazer = Karin Ohngemach, Tattoos = Dominique Loriaux (Admirs Zuordnung, noch nicht vom Labor bestätigt).
