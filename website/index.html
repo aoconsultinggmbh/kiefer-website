@@ -2,6 +2,12 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
+<!-- Google Search Console: Bestaetigung ueber HTML-Tag.
+     search.google.com/search-console -> Property hinzufuegen -> Praefix-URL ->
+     "HTML-Tag" -> Code kopieren, unten eintragen, Zeile aktiv schalten, dann
+     in der Search Console auf "Bestaetigen". Alternativ per DNS-Eintrag.
+<meta name="google-site-verification" content="HIER-CODE-EINTRAGEN">
+-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dentallabor Pforzheim · S. Kiefer GmbH | Zahntechnik für Zahnarztpraxen</title>
 <meta name="description" content="Dentallabor in Pforzheim seit 1976: digitaler Workflow, festsitzender und herausnehmbarer Zahnersatz, Schienen, Provisorien und Expressreparaturen. Eigener Fahrdienst für Praxen deutschlandweit.">
@@ -20,6 +26,7 @@
 <!-- Schriften sind als data:-URI in fonts.css eingebettet, die Seite rendert
      auch per file:// identisch wie später auf dem Server. -->
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/einwilligung.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -690,7 +697,8 @@
       <span>© S. Kiefer GmbH Dentallabor · Alle Rechte vorbehalten</span>
       <span>
         <a href="impressum.html">Impressum</a> &nbsp;·&nbsp;
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="datenschutz.html">Datenschutz</a> &nbsp;&middot;&nbsp;
+        <button type="button" class="ein-ausloeser" data-einwilligung-oeffnen>Cookie-Einstellungen</button>
       </span>
     </div>
   </div>
@@ -701,5 +709,8 @@
 </div>
 
 <script src="assets/js/app.js"></script>
+<script src="assets/js/ao-konfiguration.js"></script>
+<script src="assets/js/einwilligung.js" defer></script>
+<script src="assets/js/messung.js" defer></script>
 </body>
 </html>
