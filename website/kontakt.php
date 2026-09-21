@@ -5,8 +5,12 @@
 
    WAS HIER EINGESTELLT WIRD  (und sonst nichts):
      $an        Wer die Anfragen bekommt
-     $von       Absenderadresse. MUSS ein Postfach auf derselben Domain sein,
-                sonst stuft der Empfaenger die Mail als Spam ein.
+     $von       Absenderadresse. MUSS ein echtes Postfach auf derselben Domain
+                sein, sonst stuft der Empfaenger die Mail als Spam ein.
+                Wir nehmen bewusst dieselbe Adresse wie den Empfaenger: ein
+                Postfach weniger, und es kann keins vergessen werden.
+                Zum Antworten zaehlt ohnehin das Reply-To weiter unten, dort
+                steht die Adresse der anfragenden Praxis.
 
    SICHERHEIT
    - Honigtopf: ein fuer Menschen unsichtbares Feld. Fuellt es jemand aus,
@@ -18,7 +22,7 @@
    ============================================================================ */
 
 $an  = 'info@dental-kiefer.de';
-$von = 'noreply@dental-kiefer.de';
+$von = 'info@dental-kiefer.de';
 
 header('Content-Type: application/json; charset=utf-8');
 
