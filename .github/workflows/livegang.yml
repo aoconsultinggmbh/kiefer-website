@@ -59,16 +59,36 @@ jobs:
         if: steps.pruefen.outputs.bereit == 'ja'
         uses: actions/checkout@v4
 
+      # Hochladen mit lftp statt mit einem fertigen Baustein.
+      # Grund: Der Baustein SamKirkland/FTP-Deploy-Action bricht bei All-Inkl
+      # mit "ECONNRESET (data socket)" ab. lftp kommt mit deren FTPS zurecht,
+      # weil es die TLS-Sitzung der Steuerverbindung auf der Datenverbindung
+      # wiederverwendet - genau das verlangt der Server.
+      #
+      # --delete raeumt Dateien weg, die es im Projekt nicht mehr gibt.
+      # Das ist gewollt: im Zielordner liegt ausschliesslich diese Webseite.
       - name: Auf den Server hochladen (FTPS)
         if: steps.pruefen.outputs.bereit == 'ja'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_BENUTZER }}
-          password: ${{ secrets.FTP_PASSWORT }}
-          protocol: ftps
-          local-dir: ./website/
-          server-dir: ${{ secrets.FTP_ORDNER }}
-          exclude: |
-            **/.DS_Store
-            **/_alte-dateinamen/**
+        env:
+          SERVER: ${{ secrets.FTP_SERVER }}
+          BENUTZER: ${{ secrets.FTP_BENUTZER }}
+          PASSWORT: ${{ secrets.FTP_PASSWORT }}
+          ORDNER: ${{ secrets.FTP_ORDNER }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lftp
+          lftp <<EOF
+          set ftp:ssl-force true
+          set ftp:ssl-protect-data true
+          set ssl:verify-certificate true
+          set ftp:passive-mode true
+          set ftp:prefer-epsv false
+          set net:max-retries 3
+          set net:timeout 25
+          set net:reconnect-interval-base 5
+          set xfer:clobber on
+          open "$SERVER"
+          user "$BENUTZER" "$PASSWORT"
+          mirror --reverse --delete --verbose --parallel=2 --exclude-glob .DS_Store --exclude-glob _alte-dateinamen/ ./website/ "$ORDNER"
+          bye
+          EOF
