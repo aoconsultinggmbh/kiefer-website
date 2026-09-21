@@ -2301,3 +2301,12 @@ img.bild--kopf { object-position: 50% 18%; }
   left: -9999px !important;
   width: 1px; height: 1px; overflow: hidden;
 }
+
+
+/* Pflichtfelder im Kontaktformular */
+.pflicht { color: var(--blau); font-weight: 700; margin-left: 2px; }
+.pflicht-hinweis { margin-top: .9rem; font-size: .84rem; color: var(--grau); }
+.nur-vorlese {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}

@@ -160,7 +160,8 @@
     [['k-name', function (v) { return v.length > 1; }],
      ['k-praxis', function (v) { return v.length > 1; }],
      ['k-email', function (v) { return /.+@.+\..+/.test(v); }],
-     ['k-telefon', function (v) { return /^[\d\s/+()-]{6,}$/.test(v); }]
+     ['k-telefon', function (v) { return /^[\d\s/+()-]{6,}$/.test(v); }],
+     ['k-anliegen', function (v) { return v.length > 0; }]
     ].forEach(function (paar) {
       var el = $('#' + paar[0]);
       if (!el) return;
@@ -181,7 +182,7 @@
     z.push('Ansprechpartner: ' + feldWert('k-name'));
     z.push('E-Mail:          ' + feldWert('k-email'));
     z.push('Telefon:         ' + feldWert('k-telefon'));
-    z.push('Anliegen:        ' + (feldWert('k-anliegen') || 'Allgemeine Anfrage'));
+    z.push('Anliegen:        ' + feldWert('k-anliegen'));
     if (feldWert('k-nachricht')) {
       z.push('');
       z.push('Nachricht:');
@@ -213,7 +214,7 @@
           '<dt>Ansprechpartner</dt><dd>' + esc(feldWert('k-name')) + '</dd>' +
           '<dt>E-Mail</dt><dd>' + esc(feldWert('k-email')) + '</dd>' +
           '<dt>Telefon</dt><dd>' + esc(feldWert('k-telefon')) + '</dd>' +
-          '<dt>Anliegen</dt><dd>' + esc(feldWert('k-anliegen') || 'Allgemeine Anfrage') + '</dd>';
+          '<dt>Anliegen</dt><dd>' + esc(feldWert('k-anliegen')) + '</dd>';
       }
       formular.hidden = true;
       erfolg.hidden = false;

@@ -54,7 +54,7 @@ $telefon   = einzeilig(sauber('telefon'));
 $anliegen  = einzeilig(sauber('anliegen'));
 $nachricht = sauber('nachricht');
 
-if ($praxis === '' || $name === '' || $telefon === '') { http_response_code(400); ende(false, 'Bitte füllen Sie die Pflichtfelder aus.'); }
+if ($praxis === '' || $name === '' || $telefon === '' || $anliegen === '') { http_response_code(400); ende(false, 'Bitte füllen Sie die Pflichtfelder aus.'); }
 if (!filter_var($email, FILTER_VALIDATE_EMAIL))        { http_response_code(400); ende(false, 'Bitte prüfen Sie die E-Mail-Adresse.'); }
 
 /* --- Mail bauen --- */
@@ -64,7 +64,7 @@ $text .= "Praxis:          $praxis\n";
 $text .= "Ansprechpartner: $name\n";
 $text .= "E-Mail:          $email\n";
 $text .= "Telefon:         $telefon\n";
-$text .= "Anliegen:        " . ($anliegen !== '' ? $anliegen : 'Allgemeine Anfrage') . "\n";
+$text .= "Anliegen:        $anliegen\n";
 if ($nachricht !== '') { $text .= "\nNachricht:\n$nachricht\n"; }
 $text .= "\n---\nGesendet am " . date('d.m.Y, H:i') . " Uhr.\n";
 $text .= "Antworten Sie einfach auf diese Mail, das geht direkt an den Absender.\n";
