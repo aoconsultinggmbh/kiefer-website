@@ -2292,3 +2292,12 @@ img.bild--kopf { object-position: 50% 18%; }
   .sticky-bar { display: flex; }
   body { padding-bottom: 74px; }
 }
+
+
+/* Honigtopf gegen Roboter: fuer Menschen unsichtbar, fuer Vorleseprogramme
+   ausgeblendet (aria-hidden am Element), aber im Quelltext vorhanden. */
+.honigtopf {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px; height: 1px; overflow: hidden;
+}

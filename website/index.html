@@ -553,7 +553,13 @@
       </div>
 
       <div class="kontakt__karte">
-        <form id="kontaktformular" novalidate>
+        <form id="kontaktformular" novalidate action="kontakt.php" method="post">
+          <!-- Honigtopf: fuer Menschen unsichtbar. Nur Roboter fuellen das aus. -->
+          <div class="honigtopf" aria-hidden="true">
+            <label for="k-website">Webseite (bitte frei lassen)</label>
+            <input id="k-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="zeit" id="k-zeit" value="">
           <h3>Anfrage senden</h3>
           <p>Kein Portal, keine Registrierung. Ihre Anfrage geht direkt ins Labor.</p>
 

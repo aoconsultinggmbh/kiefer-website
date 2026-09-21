@@ -17,7 +17,10 @@
      wird vor Livegang mit dem Labor geklaert.
      ----------------------------------------------------------------------- */
   var CONFIG = {
-    endpoint: null,
+    // Serverseitiger Versand. Die Datei liegt neben index.html.
+    // Auf der Vorschau (GitHub Pages) gibt es kein PHP, dort faellt die Seite
+    // automatisch auf das Mailprogramm des Besuchers zurueck.
+    endpoint: 'kontakt.php',
     mail: 'info@dental-kiefer.de',
     telefon: '+4972317798200'
   };
@@ -139,6 +142,12 @@
   if (!formular) return;
 
   var erfolg = $('#kontakt-erfolg');
+  var fehlerfeld = $('#kontakt-fehler');
+
+  // Zeitstempel fuer die Roboterpruefung: wer in unter drei Sekunden
+  // absendet, hat das Formular nicht gelesen.
+  var zeitfeld = $('#k-zeit');
+  if (zeitfeld) zeitfeld.value = String(Math.floor(Date.now() / 1000));
 
   function feldWert(id) {
     var el = $('#' + id);
@@ -195,7 +204,8 @@
     var text = textFassung();
     var betreff = 'Anfrage: ' + feldWert('k-praxis') + ' - ' + feldWert('k-name');
 
-    if (erfolg) {
+    function zeigeErfolg() {
+      if (!erfolg) return;
       var dl = $('#kontakt-zusammenfassung');
       if (dl) {
         dl.innerHTML = '' +
@@ -210,12 +220,35 @@
       erfolg.scrollIntoView({ behavior: reduziert ? 'auto' : 'smooth', block: 'center' });
     }
 
+    var knopf = formular.querySelector('button[type=submit]');
+    var knopfText = knopf ? knopf.innerHTML : '';
+    function sperre(an) {
+      if (!knopf) return;
+      knopf.disabled = an;
+      if (an) { knopf.innerHTML = 'Wird gesendet …'; }
+      else { knopf.innerHTML = knopfText; }
+    }
+
     if (CONFIG.endpoint) {
+      sperre(true);
+      if (fehlerfeld) fehlerfeld.hidden = true;
       var daten = new FormData(formular);
-      fetch(CONFIG.endpoint, { method: 'POST', body: daten })['catch'](function () {
-        oeffneMail(betreff, text);
-      });
+      fetch(CONFIG.endpoint, { method: 'POST', body: daten })
+        .then(function (a) { return a.json()['catch'](function () { return { ok: a.ok }; }); })
+        .then(function (a) {
+          sperre(false);
+          if (a && a.ok) { zeigeErfolg(); return; }
+          throw new Error(a && a.text ? a.text : 'Fehler');
+        })
+        ['catch'](function () {
+          // Kein Server, kein PHP oder Versand fehlgeschlagen: dann das
+          // Mailprogramm des Besuchers oeffnen, damit nichts verloren geht.
+          sperre(false);
+          zeigeErfolg();
+          window.setTimeout(function () { oeffneMail(betreff, text); }, 400);
+        });
     } else {
+      zeigeErfolg();
       window.setTimeout(function () { oeffneMail(betreff, text); }, 700);
     }
 
