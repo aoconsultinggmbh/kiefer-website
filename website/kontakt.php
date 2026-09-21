@@ -54,12 +54,12 @@ $telefon   = einzeilig(sauber('telefon'));
 $anliegen  = einzeilig(sauber('anliegen'));
 $nachricht = sauber('nachricht');
 
-if ($praxis === '' || $name === '' || $telefon === '') { http_response_code(400); ende(false, 'Bitte fuellen Sie die Pflichtfelder aus.'); }
-if (!filter_var($email, FILTER_VALIDATE_EMAIL))        { http_response_code(400); ende(false, 'Bitte pruefen Sie die E-Mail-Adresse.'); }
+if ($praxis === '' || $name === '' || $telefon === '') { http_response_code(400); ende(false, 'Bitte füllen Sie die Pflichtfelder aus.'); }
+if (!filter_var($email, FILTER_VALIDATE_EMAIL))        { http_response_code(400); ende(false, 'Bitte prüfen Sie die E-Mail-Adresse.'); }
 
 /* --- Mail bauen --- */
-$betreff = 'Anfrage ueber die Webseite: ' . $praxis . ' - ' . $name;
-$text  = "Anfrage ueber dental-kiefer.de\n\n";
+$betreff = 'Anfrage über die Webseite: ' . $praxis . ' - ' . $name;
+$text  = "Anfrage über dental-kiefer.de\n\n";
 $text .= "Praxis:          $praxis\n";
 $text .= "Ansprechpartner: $name\n";
 $text .= "E-Mail:          $email\n";

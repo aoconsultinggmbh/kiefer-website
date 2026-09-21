@@ -613,10 +613,20 @@
             <svg width="34" height="34" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.8 9.4 3.4 3.4 7-7.2"/></svg>
           </div>
           <h3>Vielen Dank!</h3>
-          <p>Ihre Anfrage ist fertig. Wir melden uns persönlich bei Ihnen.</p>
+          <p>Ihre Anfrage ist bei uns angekommen. Wir melden uns persönlich bei Ihnen,
+          in der Regel noch am selben Werktag.</p>
           <dl class="zusammenfassung" id="kontakt-zusammenfassung"></dl>
-          <button class="btn btn--cta btn--voll" type="button" id="kopieren">Anfrage als Text kopieren</button>
-          <p style="margin-top:.9rem;font-size:.88rem"><a href="#" id="mail-nochmal" style="color:var(--blau);font-weight:600">E-Mail-Programm nochmal öffnen</a></p>
+          <p style="margin-top:1.1rem;font-size:.92rem;color:var(--grau)">
+            Sie brauchen es eilig? Rufen Sie uns an:
+            <a href="tel:+4972317798200" style="color:var(--blau);font-weight:600">07231 7798200</a>
+          </p>
+          <!-- Nur sichtbar, wenn der Versand ueber den Server nicht geklappt hat.
+               app.js blendet den Block dann ein. -->
+          <div id="kontakt-ersatzweg" hidden>
+            <p style="margin-top:1.1rem;font-size:.88rem">Falls etwas schiefgegangen ist:</p>
+            <button class="btn btn--geist btn--voll" type="button" id="kopieren">Anfrage als Text kopieren</button>
+            <p style="margin-top:.7rem;font-size:.88rem"><a href="#" id="mail-nochmal" style="color:var(--blau);font-weight:600">Anfrage per E-Mail-Programm senden</a></p>
+          </div>
         </div>
       </div>
     </div>

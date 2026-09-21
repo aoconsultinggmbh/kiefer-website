@@ -241,14 +241,20 @@
           throw new Error(a && a.text ? a.text : 'Fehler');
         })
         ['catch'](function () {
-          // Kein Server, kein PHP oder Versand fehlgeschlagen: dann das
-          // Mailprogramm des Besuchers oeffnen, damit nichts verloren geht.
+          // Kein Server, kein PHP oder Versand fehlgeschlagen: dann den
+          // Ersatzweg zeigen und das Mailprogramm oeffnen, damit nichts
+          // verloren geht.
           sperre(false);
           zeigeErfolg();
+          var ersatz = $('#kontakt-ersatzweg');
+          if (ersatz) ersatz.hidden = false;
           window.setTimeout(function () { oeffneMail(betreff, text); }, 400);
         });
     } else {
+      // Kein Server hinterlegt (z. B. auf der Vorschau): Ersatzweg anbieten.
       zeigeErfolg();
+      var e2 = $('#kontakt-ersatzweg');
+      if (e2) e2.hidden = false;
       window.setTimeout(function () { oeffneMail(betreff, text); }, 700);
     }
 
