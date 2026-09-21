@@ -16,6 +16,28 @@ RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^(.*)$ https://www.dental-kiefer.de/$1 [R=301,L]
 
+# --- Alte Adressen der Vorgaengerseite -------------------------------------
+# Die alte Seite lief auf PHP-Dateien. Damit Google-Treffer und Lesezeichen
+# nicht ins Leere laufen, zeigt jede alte Adresse dauerhaft (301) auf die
+# passende neue Stelle. Diese Zuordnung bitte einmal gegenlesen.
+Redirect 301 /index.php                /
+Redirect 301 /ansprechpartner.php      /ansprechpartner.html
+Redirect 301 /ansprechpartner_team.php /ansprechpartner.html
+Redirect 301 /team.php                 /ansprechpartner.html
+Redirect 301 /portrait.php             /ueber-uns.html
+Redirect 301 /philosophie.php          /ueber-uns.html
+Redirect 301 /dentallabor.php          /ueber-uns.html
+Redirect 301 /qualitaet.php            /ueber-uns.html
+Redirect 301 /rundgang.php             /ueber-uns.html
+Redirect 301 /schulung.php             /ueber-uns.html
+Redirect 301 /garantie.php             /ueber-uns.html
+Redirect 301 /leistungsuebersicht.php  /#leistungen
+Redirect 301 /logistik.php             /#ablauf
+Redirect 301 /beratung.php             /#kontakt
+Redirect 301 /anfahrt.php              /#kontakt
+Redirect 301 /kontakt.php              /#kontakt
+Redirect 301 /_datenschutzhinweis.php  /datenschutz.html
+
 ErrorDocument 404 /index.html
 
 <IfModule mod_headers.c>

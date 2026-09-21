@@ -20,7 +20,7 @@
     // Serverseitiger Versand. Die Datei liegt neben index.html.
     // Auf der Vorschau (GitHub Pages) gibt es kein PHP, dort faellt die Seite
     // automatisch auf das Mailprogramm des Besuchers zurueck.
-    endpoint: 'kontakt.php',
+    endpoint: 'anfrage-senden.php',
     mail: 'info@dental-kiefer.de',
     telefon: '+4972317798200'
   };
