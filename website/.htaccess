@@ -2,7 +2,16 @@
 # Auf der GitHub-Vorschau wird diese Datei ignoriert. VOR DEM LIVEGANG auf dem Server testen.
 
 RewriteEngine On
-# Immer https und immer www
+
+# Die Uebergangsadresse des Hosters (…kasserver.com) NICHT umleiten.
+# Sonst laesst sich die Seite vor dem Domain-Umzug nicht auf dem echten
+# Server testen - jeder Aufruf landet sofort wieder auf der alten Seite.
+# Diese Regel muss VOR der Umleitung stehen und bleibt auch nach dem
+# Livegang drin: sie stoert nicht und rettet den naechsten Test.
+RewriteCond %{HTTP_HOST} \.kasserver\.com$ [NC]
+RewriteRule ^ - [L]
+
+# Alles andere: immer https und immer www
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^(.*)$ https://www.dental-kiefer.de/$1 [R=301,L]
