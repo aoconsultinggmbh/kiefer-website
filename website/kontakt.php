@@ -21,7 +21,7 @@
    - Es wird nichts gespeichert, keine Datenbank, keine Datei, kein Cookie.
    ============================================================================ */
 
-$an  = 'info@dental-kiefer.de';
+$an  = 'bahovic@ao-consult.de';  // TESTWEISE, vor dem Livegang zurueck auf info@dental-kiefer.de
 $von = 'info@dental-kiefer.de';
 
 header('Content-Type: application/json; charset=utf-8');
